@@ -1,0 +1,27 @@
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color: #fff;
+  padding: 0 10px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.centered-elmt {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-90%);
+}
+
+.section-1 {
+  height: 375px;
+}
