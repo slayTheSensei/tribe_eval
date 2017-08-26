@@ -2,11 +2,18 @@
 
 // const showPatientsTemplate = require('../templates/patient-listing.handlebars')
 const showPatientsTemplate = require('../templates/appointment-listing.handlebars')
+const showAppointmentsTemplate = require('../templates/appointment-listing.handlebars')
 
 const getPatientsSuccess = (data) => {
   console.log(data)
   const showPatientsHtml = showPatientsTemplate({ patients: data.patients })
   $('.content').append(showPatientsHtml)
+}
+
+const getAppointmentsSuccess = (data) => {
+  console.log(data)
+  const showAppointmentsHtml = showAppointmentsTemplate({ appointments: data.appointments })
+  $('.app-content').append(showAppointmentsHtml)
 }
 
 const clearPatients = () => {
@@ -26,5 +33,6 @@ module.exports = {
   getPatientsSuccess,
   clearPatients,
   failure,
-  onDeleteDiagnosis
+  onDeleteDiagnosis,
+  getAppointmentsSuccess
 }

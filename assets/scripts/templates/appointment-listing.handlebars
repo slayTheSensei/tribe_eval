@@ -1,13 +1,13 @@
-{{#each patients as |patient|}}
+{{#each appointments as |app|}}
 
 <div class="box appointment">
-  <div class="columns" data-id="{{patient.id}}">
+  <div class="columns" data-id="{{app.id}}">
     <div class="column is-3 name">
       <p>
-        <span class="title is-bold">{{patient.given_name}} {{patient.family_name}}</span>
+        <span class="title is-bold">{{app.doctor.given_name}} {{app.patient.given_name}}</span>
         <!-- <span class="button is-danger is-outlined follow">delete</span> -->
       </p>
-      <p class="tagline">{{patient.diagnosis}}</p>
+      <p class="tagline"></p>
     </div>
     <div class="column is-2 followers has-text-centered">
       <p class="stat-val">Maester Raymon</p>
@@ -15,12 +15,12 @@
       <!-- Modal to patch request -->
     </div>
     <div class="column is-2 following has-text-centered">
-      <p class="stat-val">{{patient.dob}}</p>
+      <p class="stat-val"></p>
       <a href="#">Change Time</a>
       <!-- Modal to patch request -->
     </div>
     <div class="column is-2 likes has-text-centered">
-      <small>{{patient.email}}</small>
+      <small></small>
       <a href="#">Change Type</a>
       <!-- Modal to patch request -->
     </div>

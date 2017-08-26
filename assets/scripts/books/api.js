@@ -9,6 +9,13 @@ const getPatients = function () {
   })
 }
 
+const getAppointments = function () {
+  return $.ajax({
+    url: app.host + '/appointments', // "http://book-json.herokuapp.com/books"
+    method: 'GET'
+  })
+}
+
 // let deletePatients = function () {
 //   return $.ajax({
 //     url: app.host + '/patients', // "http://book-json.herokuapp.com/books"
@@ -18,6 +25,7 @@ const getPatients = function () {
 // };
 
 module.exports = {
-  getPatients
+  getPatients,
+  getAppointments
   // deletePatient,
 }

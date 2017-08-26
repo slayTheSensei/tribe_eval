@@ -11,6 +11,13 @@ const onGetPatients = (event) => {
     .catch(ui.failure)
 }
 
+const onGetAppointments = (event) => {
+  event.preventDefault()
+  api.getAppointments()
+    .then(ui.getAppointmentsSuccess)
+    .catch(ui.failure)
+}
+
 const onClearPatients = (event) => {
   event.preventDefault()
   ui.clearPatients()
@@ -18,6 +25,7 @@ const onClearPatients = (event) => {
 
 const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
+  $('#getAppointmentsButton').on('click', onGetAppointments)
   // $('#clearPatientsButton').on('click', onClearPatients)
   // $('#deleteDiagnosis').on('click', onDeleteDiagnosis)
   // $('#createBook').on('click', onCreateBook);
