@@ -3,25 +3,42 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
-body {
-  background-color: #fff;
-  padding: 0 10px;
-  font-size: 18px;
-  margin: 0;
-  color: #444;
-}
-
-h1 {
-  font-size: 32px;
-}
-
-.centered-elmt {
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-90%);
-}
-
-.section-1 {
-  height: 375px;
-}
+///// COLOR VARIABLES /////
+//
+// $hero-color: rgba(219 219 219 .3);
+//
+// ///////////////////////////
+//
+// body {
+//   background-color: #fff;
+//   padding: 0;
+//   font-size: 18px;
+//   margin: 0px;
+//   color: #fff;
+// }
+//
+// .appointment {
+//   margin: 20px 0;
+// }
+//
+// h1 {
+//   font-size: 32px;
+// }
+//
+// .nav {
+//   box-shadow: 0 1px 0 $hero-color;
+//   margin: 0 10px;
+// }
+//
+// .center-elmt {
+//   text-align: center;
+// }
+//
+// .steps {
+//   background-color: black;
+//   margin: 0 .75em;
+//   text-align:center;
+//   // border-radius: 10px;
+//   color: #fff;
+//
+// }

@@ -1,0 +1,15 @@
+{{#each patients as |patient|}}
+
+  <!-- {{> partial}} -->
+  <!-- Don't uncomment yet -->
+
+ <!-- Developers, why are we using data-id and not just id? -->
+  <li><h1 data-id="{{patient.id}}"> <small>given_name: {{patient.given_name}}</small></h1>
+    {{#if patient.diagnosis}}
+      {{patient.diagnosis}}
+    {{else}}
+      No diagnosis.
+    {{/if}}
+  </li>
+  <li><button id="deleteDiagnosis" name="button is-warning">Delete Book</button></li>
+{{/each}}
