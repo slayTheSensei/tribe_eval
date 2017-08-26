@@ -4,9 +4,9 @@
   <!-- Don't uncomment yet -->
 
  <!-- Developers, why are we using data-id and not just id? -->
-  <li><h1 data-id="{{patient.id}}"> <small>given_name: {{patient.given_name}}</small></h1>
+  <li><h1 data-id="{{patient.id}}"> <small>Patient: {{patient.given_name}} {{patient.family_name}}</small></h1>
     {{#if patient.diagnosis}}
-      {{patient.diagnosis}}
+      Diagnosis: {{patient.diagnosis}}
     {{else}}
       No diagnosis.
     {{/if}}

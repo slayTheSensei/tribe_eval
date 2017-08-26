@@ -1,6 +1,7 @@
 'use strict'
 
-const showPatientsTemplate = require('../templates/patient-listing.handlebars')
+// const showPatientsTemplate = require('../templates/patient-listing.handlebars')
+const showPatientsTemplate = require('../templates/appointment-listing.handlebars')
 
 const getPatientsSuccess = (data) => {
   console.log(data)
