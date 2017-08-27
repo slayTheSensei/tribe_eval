@@ -24,6 +24,14 @@ const changeDoctorSuccess = (data) => {
   }
 }
 
+const deleteAppointmentSuccess = (data) => {
+  if (data) {
+    console.log(data)
+  } else {
+    console.log('Success')
+  }
+}
+
 const clearPatients = () => {
   $('.content').empty()
 }
@@ -43,5 +51,6 @@ module.exports = {
   failure,
   onDeleteDiagnosis,
   getAppointmentsSuccess,
-  changeDoctorSuccess
+  changeDoctorSuccess,
+  deleteAppointmentSuccess
 }

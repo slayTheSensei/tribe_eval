@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <head>
     <title>Tribe Evaluations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +13,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-  </head>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -31,11 +29,11 @@
       </div>
       <div class="nav-right nav-menu is-active">
         <a class="nav-item">
-              <span class="icon is-medium">
-              <i class="fa fa-github"></i>
-              </span>
-              <span>GitHub</span>
-            </a>
+            <span class="icon is-medium">
+                <i class="fa fa-github"></i>
+            </span>
+            <span>GitHub</span>
+        </a>
         <a href="#" class="nav-item">Login</a>
       </div>
     </nav>
@@ -51,10 +49,13 @@
   <form id="change-doctor">
       <fieldset>
         <legend>Change Password</legend>
-        <input type="text" name="doctor[given_name]" value="" placeholder="New Doctor">
+        <input id="docField" type="text" value="" placeholder="New Doctor">
         <input type="submit" name="submit" value="Change Doctor">
       </fieldset>
     </form>
-  </div>
   <!-- END OF CHANGE DOCTOR -->
+
+  <!-- DELETE APPOINTMENT -->
+<!-- <button id="delete-appointment" class="button is-danger is-outlined">Delete Appointment</button>  -->
+ <!-- END OF DELETE APPOINTMENT -->
 </body>

@@ -29,17 +29,16 @@ const changeDoctor = function (data) {
   })
 }
 
-// let deletePatients = function () {
-//   return $.ajax({
-//     url: app.host + '/patients', // "http://book-json.herokuapp.com/books"
-//     method: 'DELETE',
-//     data
-//   });
-// };
+const deleteAppointment = function () {
+  return $.ajax({
+    url: app.host + '/appointments/' + 6,
+    method: 'DELETE'
+  })
+}
 
 module.exports = {
   getPatients,
   getAppointments,
-  changeDoctor
-  // deletePatient,
+  changeDoctor,
+  deleteAppointment
 }

@@ -21,9 +21,18 @@ const onGetAppointments = (event) => {
 
 const onChangeDoctor = (event) => {
   event.preventDefault()
-  let data = 'kim'
+  let data = $('#docField').val()
+  // let data = getFormFields(event.target)
+  console.log(data)
   api.changeDoctor(data)
     .then(ui.changeDoctorSuccess)
+    .catch(ui.failure)
+}
+
+const onDeleteAppointment = (event) => {
+  event.preventDefault()
+  api.deleteAppointment()
+    .then(ui.deleteAppointmentSuccess)
     .catch(ui.failure)
 }
 
@@ -36,6 +45,7 @@ const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
   $('#change-doctor').on('submit', onChangeDoctor)
+  $('#delete-appointment').on('click', onDeleteAppointment)
   // $('#deleteDiagnosis').on('click', onDeleteDiagnosis)
   // $('#createBook').on('click', onCreateBook);
 }
