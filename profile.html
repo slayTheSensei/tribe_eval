@@ -41,9 +41,20 @@
     </nav>
   </div>
   <!-- END OF NAVBAR -->
-  <button id="getAppointmentsButton" class="button is-danger">Create Appointment</button>
-  <div id="app-content" class="content">
-  <!-- APPOINTMENT BOX -->
 
+  <!-- APPOINTMENT BOX -->
+  <button id="getAppointmentsButton" class="button is-danger">Create Appointment</button>
+  <div id="app-content" class="content"></div>
   <!-- END OF APPOINTMENT BOX -->
+
+  <!-- CHANGE DOCTOR -->
+  <form id="change-doctor">
+      <fieldset>
+        <legend>Change Password</legend>
+        <input type="text" name="doctor[given_name]" value="" placeholder="New Doctor">
+        <input type="submit" name="submit" value="Change Doctor">
+      </fieldset>
+    </form>
+  </div>
+  <!-- END OF CHANGE DOCTOR -->
 </body>

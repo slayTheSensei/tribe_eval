@@ -16,6 +16,14 @@ const getAppointmentsSuccess = (data) => {
   $('#app-content').append(showAppointmentsHtml)
 }
 
+const changeDoctorSuccess = (data) => {
+  if (data) {
+    console.log(data)
+  } else {
+    console.log('Success')
+  }
+}
+
 const clearPatients = () => {
   $('.content').empty()
 }
@@ -34,5 +42,6 @@ module.exports = {
   clearPatients,
   failure,
   onDeleteDiagnosis,
-  getAppointmentsSuccess
+  getAppointmentsSuccess,
+  changeDoctorSuccess
 }
