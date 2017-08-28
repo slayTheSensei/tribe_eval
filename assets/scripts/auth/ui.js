@@ -1,38 +1,43 @@
-'use strict';
+'use strict'
 
-const app = require('../app.js');
+const app = require('../app.js')
 
 const success = (data) => {
   if (data) {
-    console.log(data);
+    console.log(data)
   } else {
-    console.log('Success');
+    console.log('Success')
   }
-};
+}
 
 const signUpSuccess = (data) => {
   if (data) {
     console.log('new page')
-    location.href = 'http://localhost:7165/signin.html'
+    // location.href = 'http://localhost:7165/signin.html'
   } else {
-    console.log('Success');
+    console.log('Success')
   }
-};
+  $('#sign-up-view').hide()
+  $('#sign-in-view').show()
+}
 
 const failure = (error) => {
-  console.error(error);
-};
+  console.error(error)
+}
 
 const signInSuccess = (data) => {
-  app.user = data.user;
-  console.log(app.user);
-  location.href = 'http://localhost:7165/profile.html'
-};
+  app.user = data.user
+  console.log(app.user)
+  $('#sign-in-view').hide()
+  $('#profile-view').show()
+  // location.href = 'http://localhost:7165/profile.html'
+}
 
 const signOutSuccess = () => {
-  console.log('User signed out successfully');
-  app.user = null;
-};
+  console.log('User signed out successfully')
+  app.user = null
+  location.href = 'http://localhost:7165/index.html'
+}
 
 module.exports = {
   success,
@@ -40,4 +45,4 @@ module.exports = {
   signInSuccess,
   signOutSuccess,
   signUpSuccess
-};
+}
