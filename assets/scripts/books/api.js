@@ -30,9 +30,9 @@ const changeDoctor = function (firstName, lastName) {
   })
 }
 
-const deleteAppointment = function () {
+const deleteAppointment = function (id) {
   return $.ajax({
-    url: app.host + '/appointments/' + 10,
+    url: app.host + '/appointments/' + id,
     method: 'DELETE'
   })
 }

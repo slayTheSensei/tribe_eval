@@ -2,7 +2,8 @@
 
 const api = require('./api.js')
 const ui = require('./ui.js')
-const showPatientsTemplate = require('../templates/patient-listing.handlebars')
+// const showPatientsTemplate = require('../templates/patient-listing.handlebars')
+// const showAppointmentsTemplate = require('../templates/appointment-listing.handlebars')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onGetPatients = (event) => {
@@ -32,7 +33,10 @@ const onChangeDoctor = (event) => {
 
 const onDeleteAppointment = (event) => {
   event.preventDefault()
-  api.deleteAppointment()
+  // $(this).attr('name')
+  console.log(event.target.name)
+  let id = (event.target.name)
+  api.deleteAppointment(id)
     .then(ui.deleteAppointmentSuccess)
     .catch(ui.failure)
 }
@@ -46,7 +50,8 @@ const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
   $('#change-doctor').on('submit', onChangeDoctor)
-  $('#delete-appointment').on('click', onDeleteAppointment)
+  // $('#delete-appointment').on('click', onDeleteAppointment)
+  $('body').on('click', '#delete-appointment', onDeleteAppointment)
   $('#clear-appointments').on('click', onClearAppointments)
 }
 
