@@ -16,11 +16,12 @@ const getAppointmentsSuccess = (data) => {
   $('#app-content').append(showAppointmentsHtml)
 }
 
-const changeDoctorSuccess = (data) => {
-  if (data) {
-    console.log(data)
+const changeDoctorSuccess = (firstName) => {
+  if (firstName) {
+    console.log(firstName)
   } else {
     console.log('Success')
+    alert('Name Changed')
   }
 }
 

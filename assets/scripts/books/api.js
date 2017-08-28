@@ -16,14 +16,15 @@ const getAppointments = function () {
   })
 }
 
-const changeDoctor = function (data) {
-  console.log(data + ' is the data')
+const changeDoctor = function (firstName, lastName) {
+  console.log(firstName + ' is the data')
   return $.ajax({
     url: app.host + '/doctors/' + 2,
     method: 'PATCH',
     data: {
       'doctor': {
-        'given_name': data
+        'given_name': firstName,
+        'family_name': lastName
       }
     }
   })

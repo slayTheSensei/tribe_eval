@@ -21,10 +21,11 @@ const onGetAppointments = (event) => {
 
 const onChangeDoctor = (event) => {
   event.preventDefault()
-  let data = $('#docField').val()
+  let firstName = $('#first-name').val()
+  let lastName = $('#last-name').val()
   // let data = getFormFields(event.target)
-  console.log(data)
-  api.changeDoctor(data)
+  console.log(firstName + ' ' + lastName)
+  api.changeDoctor(firstName, lastName)
     .then(ui.changeDoctorSuccess)
     .catch(ui.failure)
 }
