@@ -49,15 +49,15 @@
                   </h1>
 
                 <!-- START OF LOGIN FORM -->
-                  <div class="login-form">
+                  <form id="sign-in" class="login-form">
                     <p class="control has-icon has-icon-right">
-                      <input class="input email-input" type="text" placeholder="jsmith@example.org">
+                      <input class="input email-input" type="text" name="credentials[email]" value="" placeholder="email">
                       <span class="icon user">
                         <i class="fa fa-user"></i>
                       </span>
                     </p>
                     <p class="control has-icon has-icon-right">
-                      <input class="input password-input" type="password" placeholder="●●●●●●●">
+                      <input class="input password-input"type="password" name="credentials[password]" value="" placeholder="password">
                       <span class="icon user">
                         <i class="fa fa-lock"></i>
                       </span>
@@ -65,7 +65,7 @@
                     <p class="control login">
                       <button class="button is-success is-outlined is-large is-fullwidth">Login</button>
                     </p>
-                  </div>
+                  </form>
                   <!-- END OF LOGIN FORM -->
 
                   <div class="section forgot-password">

@@ -26,6 +26,7 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(app.user);
+  location.href = 'http://localhost:7165/profile.html'
 };
 
 const signOutSuccess = () => {
