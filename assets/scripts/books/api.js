@@ -19,7 +19,7 @@ const getAppointments = function () {
 const changeDoctor = function (data) {
   console.log(data + ' is the data')
   return $.ajax({
-    url: app.host + '/doctors/' + 1,
+    url: app.host + '/doctors/' + 2,
     method: 'PATCH',
     data: {
       'doctor': {
@@ -31,7 +31,7 @@ const changeDoctor = function (data) {
 
 const deleteAppointment = function () {
   return $.ajax({
-    url: app.host + '/appointments/' + 6,
+    url: app.host + '/appointments/' + 10,
     method: 'DELETE'
   })
 }

@@ -36,9 +36,9 @@ const onDeleteAppointment = (event) => {
     .catch(ui.failure)
 }
 
-const onClearPatients = (event) => {
+const onClearAppointments = (event) => {
   event.preventDefault()
-  ui.clearPatients()
+  ui.clearAppointments()
 }
 
 const addHandlers = () => {
@@ -46,8 +46,7 @@ const addHandlers = () => {
   $('#getAppointmentsButton').on('click', onGetAppointments)
   $('#change-doctor').on('submit', onChangeDoctor)
   $('#delete-appointment').on('click', onDeleteAppointment)
-  // $('#deleteDiagnosis').on('click', onDeleteDiagnosis)
-  // $('#createBook').on('click', onCreateBook);
+  $('#clear-appointments').on('click', onClearAppointments)
 }
 
 module.exports = {

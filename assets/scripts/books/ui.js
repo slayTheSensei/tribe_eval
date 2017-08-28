@@ -32,7 +32,7 @@ const deleteAppointmentSuccess = (data) => {
   }
 }
 
-const clearPatients = () => {
+const clearAppointments = () => {
   $('.content').empty()
 }
 
@@ -47,10 +47,10 @@ const failure = (error) => {
 
 module.exports = {
   getPatientsSuccess,
-  clearPatients,
   failure,
   onDeleteDiagnosis,
   getAppointmentsSuccess,
   changeDoctorSuccess,
-  deleteAppointmentSuccess
+  deleteAppointmentSuccess,
+  clearAppointments
 }
