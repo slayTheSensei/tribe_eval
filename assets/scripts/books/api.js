@@ -37,9 +37,26 @@ const deleteAppointment = function (id) {
   })
 }
 
+const createAppointment = function (type, date, doctor, patient) {
+  console.log(type + ' ' + date + ' ' + doctor + ' ' + patient)
+  return $.ajax({
+    url: app.host + '/appointments/',
+    method: 'POST',
+    data: {
+      'appointment': {
+        'app-date': date,
+        'app_type': type,
+        'doctor_id': doctor,
+        'patient_id': patient
+      }
+    }
+  })
+}
+
 module.exports = {
   getPatients,
   getAppointments,
   changeDoctor,
-  deleteAppointment
+  deleteAppointment,
+  createAppointment
 }

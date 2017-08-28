@@ -21,7 +21,6 @@ const changeDoctorSuccess = (firstName) => {
     console.log(firstName)
   } else {
     console.log('Success')
-    alert('Name Changed')
   }
 }
 
@@ -31,6 +30,10 @@ const deleteAppointmentSuccess = (data) => {
   } else {
     console.log('Success')
   }
+}
+
+const createAppointmentSuccess = () => {
+  console.log('Success')
 }
 
 const clearAppointments = () => {
@@ -53,5 +56,6 @@ module.exports = {
   getAppointmentsSuccess,
   changeDoctorSuccess,
   deleteAppointmentSuccess,
-  clearAppointments
+  clearAppointments,
+  createAppointmentSuccess
 }

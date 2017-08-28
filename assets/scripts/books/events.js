@@ -46,11 +46,24 @@ const onClearAppointments = (event) => {
   ui.clearAppointments()
 }
 
+const onCreateAppointment = (event) => {
+  event.preventDefault()
+  let type = $('#app-type').val()
+  let date = $('#app-date').val()
+  let doctor = $('#app-doctor').val()
+  let patient = $('#app-patient').val()
+  // let data = getFormFields(event.target) || TODO come back and refractor
+  console.log(type + ' ' + patient)
+  api.createAppointment(type, date, doctor, patient)
+    .then(ui.createAppointmentSuccess)
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
   $('#change-doctor').on('submit', onChangeDoctor)
-  // $('#delete-appointment').on('click', onDeleteAppointment)
+  $('#create-appointment').on('submit', onCreateAppointment)
   $('body').on('click', '#delete-appointment', onDeleteAppointment)
   $('#clear-appointments').on('click', onClearAppointments)
 }
