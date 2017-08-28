@@ -7,9 +7,10 @@ const ui = require('./ui');
 
 const onSignUp = (event) => {
   event.preventDefault();
+  console.log(event.target)
   let data = getFormFields(event.target);
   api.signUp(data)
-  .then(ui.success)
+  .then(ui.signUpSuccess)
   .catch(ui.failure);
 };
 
