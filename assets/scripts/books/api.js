@@ -31,9 +31,9 @@ const changeDoctor = function (firstName, lastName, id) {
 }
 
 const changeDiagnosis = function (diagnosis, id) {
-  console.log(event.target + ' is the data')
+  console.log(id + ' is the data')
   return $.ajax({
-    url: app.host + '/patients/' + 1,
+    url: app.host + '/patients/' + id,
     method: 'PATCH',
     data: {
       'patient': {

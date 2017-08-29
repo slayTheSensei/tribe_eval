@@ -73,12 +73,12 @@ const refresh = function () {
   onGetAppointments()
 }
 
-const onUpdateDiagnosis = function () {
+const onUpdateDiagnosis = function (event) {
   event.preventDefault()
   let diagnosis = $('#diagnosis').val()
   let id = (event.target.name)
   // let data = getFormFields(event.target)
-  api.changeDiagnosis(diagnosis)
+  api.changeDiagnosis(diagnosis, id)
     .then(ui.changeDoctorSuccess)
     .catch(ui.failure)
 }
@@ -92,7 +92,7 @@ const addHandlers = () => {
   $('#clear-appointments').on('click', onClearAppointments)
   $('body').on('click', '.modal-doctor-toggle', toggleDoctorModal)
   $('body').on('click', '.refresh', refresh)
-  $('body').on('submit', '#change-diagnosis', onUpdateDiagnosis)
+  $('body').on('click', '#change-patient-diagnosis', onUpdateDiagnosis)
   // Diagnosis Modal
   $('body').on('click', '.modal-diagnosis-toggle', toggleDiagnosisModal)
 }
