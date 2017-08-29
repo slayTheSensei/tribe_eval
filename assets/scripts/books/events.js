@@ -24,9 +24,10 @@ const onChangeDoctor = (event) => {
   event.preventDefault()
   let firstName = $('#first-name').val()
   let lastName = $('#last-name').val()
+  let id = (event.target.name)
   // let data = getFormFields(event.target)
   console.log(firstName + ' ' + lastName)
-  api.changeDoctor(firstName, lastName)
+  api.changeDoctor(firstName, lastName, id)
     .then(ui.changeDoctorSuccess)
     .catch(ui.failure)
 }
@@ -85,7 +86,7 @@ const onUpdateDiagnosis = function () {
 const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
-  $('body').on('submit', '#change-doctor', onChangeDoctor)
+  $('body').on('click', '#change-doc', onChangeDoctor)
   $('#create-appointment').on('submit', onCreateAppointment)
   $('body').on('click', '#delete-appointment', onDeleteAppointment)
   $('#clear-appointments').on('click', onClearAppointments)
