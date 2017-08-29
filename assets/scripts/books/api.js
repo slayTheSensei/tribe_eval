@@ -30,6 +30,19 @@ const changeDoctor = function (firstName, lastName) {
   })
 }
 
+const changeDiagnosis = function (diagnosis, id) {
+  console.log(event.target + ' is the data')
+  return $.ajax({
+    url: app.host + '/patients/' + 1,
+    method: 'PATCH',
+    data: {
+      'patient': {
+        'diagnosis': diagnosis
+      }
+    }
+  })
+}
+
 const deleteAppointment = function (id) {
   return $.ajax({
     url: app.host + '/appointments/' + id,
@@ -58,5 +71,6 @@ module.exports = {
   getAppointments,
   changeDoctor,
   deleteAppointment,
-  createAppointment
+  createAppointment,
+  changeDiagnosis
 }

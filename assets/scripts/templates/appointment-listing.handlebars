@@ -20,7 +20,7 @@
     </div>
     <div class="column is-2 likes has-text-centered">
       <p class="is-4">{{app.patient.diagnosis}}</p>
-      <a href="#">Change Type</a>
+      <a class="modal-diagnosis-toggle"href="#">Change Diagnosis</a>
       <!-- Modal to patch request -->
     </div>
     <div class="column is-1">
@@ -45,6 +45,22 @@
 </div>
 <!-- <button class="modal-doctor-toggle button is-primary">Modal</button> -->
 <!-- END OF DOCTOR MODAL-->
+
+<!-- DIAGNOSIS MODAL-->
+<div id="update-diagnosis" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content box">
+    <form id="change-diagnosis">
+          <legend clas>Change Diagnosis</legend><br>
+          <input class="input" id="diagnosis" type="text" value="" placeholder="Diagnosis">
+          <input class="button is-info" type="submit" name="submit" value="Change Diagnosis">
+          <p class="changed has-text-danger"></p>
+      </form>
+    <button class="modal-close is-large modal-diagnosis-toggle refresh" aria-label="">Close</button>
+  </div>
+</div>
+<!-- <button class="modal-doctor-toggle button is-primary">Modal</button> -->
+<!-- END OF DIAGNOSIS MODAL-->
 
 
 {{/each}}

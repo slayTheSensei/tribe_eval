@@ -63,10 +63,23 @@ const toggleDoctorModal = function () {
   // event.preventDefault()
   $('#change-doctor').toggleClass('is-active')
 }
+const toggleDiagnosisModal = function () {
+  $('#update-diagnosis').toggleClass('is-active')
+}
 
 const refresh = function () {
   onClearAppointments()
   onGetAppointments()
+}
+
+const onUpdateDiagnosis = function () {
+  event.preventDefault()
+  let diagnosis = $('#diagnosis').val()
+  let id = (event.target.name)
+  // let data = getFormFields(event.target)
+  api.changeDiagnosis(diagnosis)
+    .then(ui.changeDoctorSuccess)
+    .catch(ui.failure)
 }
 
 const addHandlers = () => {
@@ -76,9 +89,11 @@ const addHandlers = () => {
   $('#create-appointment').on('submit', onCreateAppointment)
   $('body').on('click', '#delete-appointment', onDeleteAppointment)
   $('#clear-appointments').on('click', onClearAppointments)
-  // $('change-doctor').toggleclass('is-active')
   $('body').on('click', '.modal-doctor-toggle', toggleDoctorModal)
   $('body').on('click', '.refresh', refresh)
+  $('body').on('submit', '#change-diagnosis', onUpdateDiagnosis)
+  // Diagnosis Modal
+  $('body').on('click', '.modal-diagnosis-toggle', toggleDiagnosisModal)
 }
 
 $(document).ready(onGetAppointments)
