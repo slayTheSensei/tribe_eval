@@ -1,103 +1,183 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tribe Evaluations</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Tribe Evaluations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-    </head>
-    <body>
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+</head>
+<body>
 
-  <!-- NAVBAR -->
-      <div class="block">
-        <nav class="nav">
-          <div class="nav-left">
-            <a href="#" class="nav-item">
-              <h1 class="title is-4" href="index.html">Tribe</h1>
-            </a>
-            <a href="#" class="nav-item">How it Works</a>
-            <a href="./profile.html" class="nav-item">FAQ</a>
-          </div>
-          <div class="nav-center">
-          </div>
-          <div class="nav-right nav-menu is-active">
-            <a class="nav-item">
-              <span class="icon is-medium">
-                <i class="fa fa-github"></i>
-              </span>
-              <span>GitHub</span>
-            </a>
-            <a href="signup.html" class="nav-item">Login</a>
-          </div>
-        </nav>
-      </div> <!-- END OF NAVBAR -->
 
-      <!-- LANDING SECTION -->
-      <section class="hero is-medium">
-        <div class="hero-body">
-        <div class="container center-elmt">
-          <h1 class="title">
-            Get Your Card
-          </h1>
-          <p class="subtitle">
-            Online Marijuana Evaluation Platform!
-          </p>
-          <button class="button is-primary is-outline">Make an Appointment</button>
-        </div>
-      </div>
-      </section>
-      <!-- END OF LANDING SECTION -->
-
-      <!-- HERO -->
-      <section class="hero is-primary is-bold is-medium">
-        <div class="hero-body">
-
-          <!-- <div id="change-doctor" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content box">
-              <form id="change-doctor">
-                    <legend clas>Change Doctor</legend><br>
-                    <input class="input" id="first-name" type="text" value="" placeholder="First Name">
-                    <input class="input" id="last-name" type="text" value="" placeholder="Last Name"><br><br>
-                    <input class="button is-info" type="submit" name="submit" value="Change Doctor">
-                </form>
-              <button class="modal-close is-large modal-doctor-toggle" aria-label="">Close</button>
+  <!-- SIGN UP VIEW -->
+  <section id="sign-up-view" class="hero is-fullheight is-light is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-4 is-offset-4">
+            <form id="sign-up" class="box">
+              <label class="label">Email</label>
+              <p class="control">
+                <input class="input email-input" type="text" name="credentials[email]" value="" placeholder="email">
+              </p>
+              <hr>
+              <label class="label">Password</label>
+              <p class="control">
+                <input class="input password-input" type="password" name="credentials[password]" value="" placeholder="password">
+              </p>
+              <label class="label">Confirm Password</label>
+              <p class="control">
+                <input class="input password-input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+              </p>
+              <hr>
+              <p class="control">
+                <button type="submit" class="button is-primary">Register</button>
+                <button class="button is-default">Cancel</button>
+              </p>
+            </form>
+            <div class="section forgot-password">
+              <p class="has-text-centered">
+                <a id="to-sign-in" href="#">Already a member?</a><br>
+                <a href="#">Need help?</a>
+              </p>
             </div>
           </div>
-          <button class="modal-doctor-toggle button is-primary">Modal</button> -->
-
         </div>
-      </section>
-      <!-- END OF HERO SECTION -->
+      </div>
+    </div>
+  </section>
+  <!-- END OF SIGN UP VIEW -->
 
-      <!-- APP SECTION -->
-      <section class="hero is-fullheight">
-      </section>
-      <!-- END OF APP SECTION -->
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p>
-              Created in <strong>PVD</strong> by <a href="http://jgthms.com">Kyle Pearson</a>.
-            </p>
-            <p>
-              <a class="icon" href="https://github.com/jgthms/bulma">
-                <i class="fa fa-github"></i>
-              </a>
-            </p>
+
+  <!-- SIGN IN VIEW -->
+  <div id="sign-in-view" class="login-wrapper columns">
+      <div class="column is-8 is-hidden-mobile hero-banner">
+        <section class="hero is-fullheight is-dark">
+          <div class="hero-body">
+            <div class="container section">
+              <div class="has-text-right">
+                <h1 class="title is-1">Login</h1> <br>
+                <p class="title is-3">Meet With a Doctor in Minutes</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
-      <!-- END OF FOOTER -->
+          <div class="hero-footer">
+            <!-- <p class="has-text-centered">Image © Glenn Carstens-Peters via unsplash</p> -->
+          </div>
+        </section>
+      </div>
+      <div class="column is-4">
+        <section class="hero is-fullheight">
+          <div class="hero-heading">
+            <div class="section has-text-centered">
+              <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo" width="150px"> -->
+              <h1 class="title">TRIBE</h1>
+            </div>
+          </div>
+          <div class="hero-body">
+            <div class="container">
+              <div class="columns">
+                <div class="column is-8 is-offset-2">
+                  <h1 class="avatar has-text-centered section">
+                    <!-- <img src="https://placehold.it/128x128"> -->
+                  </h1>
 
-    </body>
+                <!-- START OF LOGIN FORM -->
+                  <form id="sign-in" class="login-form">
+                    <p class="control has-icon has-icon-right">
+                      <input class="input email-input" type="text" name="credentials[email]" value="" placeholder="email">
+                      <span class="icon user">
+                        <i class="fa fa-user"></i>
+                      </span>
+                    </p>
+                    <p class="control has-icon has-icon-right">
+                      <input class="input password-input"type="password" name="credentials[password]" value="" placeholder="password">
+                      <span class="icon user">
+                        <i class="fa fa-lock"></i>
+                      </span>
+                    </p>
+                    <p class="control login">
+                      <button class="button is-success is-outlined is-large is-fullwidth">Login</button>
+                    </p>
+                  </form>
+                  <!-- END OF LOGIN FORM -->
+
+                  <div class="section forgot-password">
+                    <p class="has-text-centered">
+                      <a href="#">Forgot password</a><br>
+                      <a href="#">Need help?</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  <!-- END OF SIGN IN VIEW -->
+
+
+    <!-- PROFILE VIEW -->
+    <section id="profile-view">
+    <div class="block">
+      <nav class="nav">
+        <div class="nav-left">
+          <a href="index.html" class="nav-item">
+            <h1 class="title is-4">Tribe</h1>
+          </a>
+          <a href="#" class="nav-item">How it Works</a>
+          <a href="#" class="nav-item">FAQ</a>
+        </div>
+        <div class="nav-center">
+        </div>
+        <div class="nav-right nav-menu is-active">
+          <a class="nav-item">
+              <span class="icon is-medium">
+                  <i class="fa fa-github"></i>
+              </span>
+              <span>GitHub</span>
+          </a>
+          <form id="sign-out">
+                <input class="button is-primary is-medium nav-item" type="submit" name="submit" value="Sign out!">
+            </form>
+        </div>
+      </nav>
+    </div>
+    <!-- END OF NAVBAR -->
+
+    <!-- APPOINTMENT BOX -->
+    <button id="getAppointmentsButton" class="button is-danger">Show Appointment</button>
+    <button id="clear-appointments" class="button is-info">Clear</button>
+    <button id="create-appointment" class="button is-primary create-modal-toggle">Create Appointment</button>
+    <div id="app-content" class="content"></div>
+    </section>
+  <!-- END OF PROFILE VIEW -->
+
+  <!-- CREATE APPOINTMENT MODAL -->
+  <div id="create-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <form id="create-app">
+        <legend>Create Appointment</legend>
+        <input id="app-type" type="text" value="" placeholder="Type of Appointment">
+        <input id="app-date" type="text" value="" placeholder="Date of appointment">
+        <input id="app-doctor" type="text" value="" placeholder="Doctor">
+        <input id="app-patient" type="text" value="" placeholder="Patient">
+        <input type="submit" name="submit" value="New Appointment">
+            <p class="changed has-text-danger"></p>
+        </form>
+      <button class="modal-close is-large create-modal-toggle refresh" aria-label="">Close</button>
+    </div>
+  </div>
+  <!-- END OF CREATE APPOINTMENT MODAL -->
+</body>
 </html>
