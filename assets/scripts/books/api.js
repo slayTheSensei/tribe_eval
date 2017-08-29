@@ -4,14 +4,14 @@ const app = require('../app.js')
 
 const getPatients = function () {
   return $.ajax({
-    url: app.host + '/patients', // "http://book-json.herokuapp.com/books"
+    url: app.host + '/patients',
     method: 'GET'
   })
 }
 
 const getAppointments = function () {
   return $.ajax({
-    url: app.host + '/appointments', // "http://book-json.herokuapp.com/books"
+    url: app.host + '/appointments',
     method: 'GET'
   })
 }
