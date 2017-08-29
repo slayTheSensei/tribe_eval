@@ -14,7 +14,7 @@ const onGetPatients = (event) => {
 }
 
 const onGetAppointments = (event) => {
-  event.preventDefault()
+  // event.preventDefault()
   api.getAppointments()
     .then(ui.getAppointmentsSuccess)
     .catch(ui.failure)
@@ -42,7 +42,7 @@ const onDeleteAppointment = (event) => {
 }
 
 const onClearAppointments = (event) => {
-  event.preventDefault()
+  // event.preventDefault()
   ui.clearAppointments()
 }
 
@@ -59,15 +59,31 @@ const onCreateAppointment = (event) => {
     .catch(ui.failure)
 }
 
+const toggleDoctorModal = function () {
+  // event.preventDefault()
+  $('#change-doctor').toggleClass('is-active')
+}
+
+const refresh = function () {
+  onClearAppointments()
+  onGetAppointments()
+}
+
 const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
-  $('#change-doctor').on('submit', onChangeDoctor)
+  $('body').on('submit', '#change-doctor', onChangeDoctor)
   $('#create-appointment').on('submit', onCreateAppointment)
   $('body').on('click', '#delete-appointment', onDeleteAppointment)
   $('#clear-appointments').on('click', onClearAppointments)
+  // $('change-doctor').toggleclass('is-active')
+  $('body').on('click', '.modal-doctor-toggle', toggleDoctorModal)
+  $('body').on('click', '.refresh', refresh)
 }
 
+$(document).ready(onGetAppointments)
+
 module.exports = {
-  addHandlers
+  addHandlers,
+  toggleDoctorModal
 }

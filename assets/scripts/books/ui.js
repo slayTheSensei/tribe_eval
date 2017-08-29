@@ -3,6 +3,7 @@
 // const showPatientsTemplate = require('../templates/patient-listing.handlebars')
 const showPatientsTemplate = require('../templates/patient-listing.handlebars')
 const showAppointmentsTemplate = require('../templates/appointment-listing.handlebars')
+const appEvents = require('./events.js')
 
 const getPatientsSuccess = (data) => {
   console.log(data)
@@ -16,12 +17,9 @@ const getAppointmentsSuccess = (data) => {
   $('#app-content').append(showAppointmentsHtml)
 }
 
-const changeDoctorSuccess = (firstName) => {
-  if (firstName) {
-    console.log(firstName)
-  } else {
-    console.log('Success')
-  }
+const changeDoctorSuccess = () => {
+  console.log('Beast Mode')
+  $('.changed').html('Updated')
 }
 
 const deleteAppointmentSuccess = (data) => {

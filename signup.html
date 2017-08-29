@@ -28,16 +28,16 @@
             <form id="sign-up" class="box">
               <label class="label">Email</label>
               <p class="control">
-                <input class="input" type="text" name="credentials[email]" value="" placeholder="email">
+                <input class="input email-input" type="text" name="credentials[email]" value="" placeholder="email">
               </p>
               <hr>
               <label class="label">Password</label>
               <p class="control">
-                <input class="input" type="password" name="credentials[password]" value="" placeholder="password">
+                <input class="input password-input" type="password" name="credentials[password]" value="" placeholder="password">
               </p>
               <label class="label">Confirm Password</label>
               <p class="control">
-                <input class="input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+                <input class="input password-input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
               </p>
               <hr>
               <p class="control">
@@ -45,10 +45,12 @@
                 <button class="button is-default">Cancel</button>
               </p>
             </form>
-            <p class="has-text-centered">
-              <a id="to-sign-in" href="#">Login</a><br>
-              <a href="#">Need help?</a>
-            </p>
+            <div class="section forgot-password">
+              <p class="has-text-centered">
+                <a id="to-sign-in" href="#">Already a member?</a><br>
+                <a href="#">Need help?</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +133,7 @@
     <div class="block">
       <nav class="nav">
         <div class="nav-left">
-          <a href="#" class="nav-item">
+          <a href="index.html" class="nav-item">
             <h1 class="title is-4">Tribe</h1>
           </a>
           <a href="#" class="nav-item">How it Works</a>
@@ -160,7 +162,5 @@
     <div id="app-content" class="content"></div>
     </section>
   <!-- END OF PROFILE VIEW -->
-
-
 </body>
 </html>

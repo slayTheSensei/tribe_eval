@@ -10,7 +10,7 @@
     </div>
     <div class="column is-2 followers has-text-centered">
       <p class="stat-val">{{app.doctor.given_name}} {{app.doctor.family_name}}</p>
-      <a href="#">Change Doctor</a>
+      <a class="modal-doctor-toggle" href="#">Change Doctor</a>
       <!-- Modal to patch request -->
     </div>
     <div class="column is-2 following has-text-centered">
@@ -28,5 +28,23 @@
     </div>
   </div>
 </div>
+
+<!-- DOCTOR MODAL-->
+<div id="change-doctor" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content box">
+    <form id="change-doctor">
+          <legend clas>Change Doctor</legend><br>
+          <input class="input" id="first-name" type="text" value="" placeholder="First Name">
+          <input class="input" id="last-name" type="text" value="" placeholder="Last Name"><br><br>
+          <input class="button is-info" type="submit" name="submit" value="Change Doctor">
+          <p class="changed has-text-danger"></p>
+      </form>
+    <button class="modal-close is-large modal-doctor-toggle refresh" aria-label="">Close</button>
+  </div>
+</div>
+<!-- <button class="modal-doctor-toggle button is-primary">Modal</button> -->
+<!-- END OF DOCTOR MODAL-->
+
 
 {{/each}}
