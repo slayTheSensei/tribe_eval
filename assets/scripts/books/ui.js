@@ -3,7 +3,7 @@
 // const showPatientsTemplate = require('../templates/patient-listing.handlebars')
 const showPatientsTemplate = require('../templates/patient-listing.handlebars')
 const showAppointmentsTemplate = require('../templates/appointment-listing.handlebars')
-const appEvents = require('./events.js')
+// const appEvents = require('./events.js')
 
 const getPatientsSuccess = (data) => {
   console.log(data)

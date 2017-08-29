@@ -3,7 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
 
-const authEvents = require('./auth/events.js');
+const authEvents = require('./auth/events.js')
 const bookEvents = require('./books/events.js');
 
 // On document ready

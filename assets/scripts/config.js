@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://tribe-api.herokuapp.com/',
-    development: 'http://localhost:4741/'
+    production: 'https://slaythesensei.github.io/tribe_eval/'
+    // development: 'http://localhost:4741/'
   }
 }
 
