@@ -39,6 +39,7 @@ const onDeleteAppointment = (event) => {
   let id = (event.target.name)
   api.deleteAppointment(id)
     .then(ui.deleteAppointmentSuccess)
+    .then(refresh)
     .catch(ui.failure)
 }
 
@@ -60,12 +61,17 @@ const onCreateAppointment = (event) => {
     .catch(ui.failure)
 }
 
+// MODAL CLICK HANDLERS
 const toggleDoctorModal = function () {
   // event.preventDefault()
   $('#change-doctor').toggleClass('is-active')
 }
 const toggleDiagnosisModal = function () {
   $('#update-diagnosis').toggleClass('is-active')
+}
+
+const toggleCreateModal = function () {
+  $('#create-modal').toggleClass('is-active')
 }
 
 const refresh = function () {
@@ -87,7 +93,7 @@ const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
   $('body').on('click', '#change-doc', onChangeDoctor)
-  $('#create-appointment').on('submit', onCreateAppointment)
+  $('#create-app').on('submit', onCreateAppointment)
   $('body').on('click', '#delete-appointment', onDeleteAppointment)
   $('#clear-appointments').on('click', onClearAppointments)
   $('body').on('click', '.modal-doctor-toggle', toggleDoctorModal)
@@ -95,11 +101,15 @@ const addHandlers = () => {
   $('body').on('click', '#change-patient-diagnosis', onUpdateDiagnosis)
   // Diagnosis Modal
   $('body').on('click', '.modal-diagnosis-toggle', toggleDiagnosisModal)
+  // Create Modal
+  $('.create-modal-toggle').on('click', toggleCreateModal)
+  // $('#close-modal').on('click', toggleCreateModal)
 }
 
 $(document).ready(onGetAppointments)
 
 module.exports = {
   addHandlers,
-  toggleDoctorModal
+  toggleDoctorModal,
+  refresh
 }

@@ -31,7 +31,8 @@ const deleteAppointmentSuccess = (data) => {
 }
 
 const createAppointmentSuccess = () => {
-  console.log('Success')
+  console.log('Beast Mode')
+  $('.changed').html('Updated')
 }
 
 const clearAppointments = () => {

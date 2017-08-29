@@ -159,8 +159,27 @@
     <!-- APPOINTMENT BOX -->
     <button id="getAppointmentsButton" class="button is-danger">Show Appointment</button>
     <button id="clear-appointments" class="button is-info">Clear</button>
+    <button id="create-appointment" class="button is-primary create-modal-toggle">Create Appointment</button>
     <div id="app-content" class="content"></div>
     </section>
   <!-- END OF PROFILE VIEW -->
+
+  <!-- CREATE APPOINTMENT MODAL -->
+  <div id="create-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <form id="create-app">
+        <legend>Create Appointment</legend>
+        <input id="app-type" type="text" value="" placeholder="Type of Appointment">
+        <input id="app-date" type="text" value="" placeholder="Date of appointment">
+        <input id="app-doctor" type="text" value="" placeholder="Doctor">
+        <input id="app-patient" type="text" value="" placeholder="Patient">
+        <input type="submit" name="submit" value="New Appointment">
+            <p class="changed has-text-danger"></p>
+        </form>
+      <button class="modal-close is-large create-modal-toggle refresh" aria-label="">Close</button>
+    </div>
+  </div>
+  <!-- END OF CREATE APPOINTMENT MODAL -->
 </body>
 </html>
