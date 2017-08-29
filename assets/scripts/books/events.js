@@ -25,7 +25,6 @@ const onChangeDoctor = (event) => {
   let firstName = $('#first-name').val()
   let lastName = $('#last-name').val()
   let id = (event.target.name)
-  // let data = getFormFields(event.target)
   console.log(firstName + ' ' + lastName)
   api.changeDoctor(firstName, lastName, id)
     .then(ui.changeDoctorSuccess)
