@@ -5,7 +5,7 @@
 
 ///// COLOR VARIABLES /////
 //
-// $hero-color: rgba(219 219 219 .3);
+$hero-color: rgba(219 219 219 .3);
 //
 // ///////////////////////////
 //
@@ -17,9 +17,9 @@
 //   color: #fff;
 // }
 //
-// .appointment {
-//   margin: 20px 0;
-// }
+.appointment {
+  color: $hero-color;
+}
 //
 // h1 {
 //   font-size: 32px;
