@@ -16,6 +16,81 @@
 </head>
 <body>
 
+<!-- LANDING VIEW -->
+<!-- NAVBAR -->
+  <section id="landing">
+    <div class="block">
+      <nav class="nav"
+        <div class="nav-left">
+          <a href="#" class="nav-item">
+            <h1 class="title is-4" href="index.html">Tribe</h1>
+          </a>
+          <a href="#how-to" class="nav-item">How it Works</a>
+          <a href="#" class="nav-item">FAQ</a>
+          <a class="nav-item login-button">Login</a>
+          <a class="nav-item">
+            <span class="icon is-medium">
+              <i class="fa fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <div class="nav-center">
+        </div>
+        <div class="nav-right nav-menu is-active">
+
+
+        </div>
+      </nav>
+    </div> <!-- END OF NAVBAR -->
+
+    <!-- LANDING SECTION -->
+    <section class="hero is-medium">
+      <div class="hero-body">
+      <div class="container center-elmt">
+        <h1 class="title">
+          Get Your Card
+        </h1>
+        <p class="subtitle">
+          Online Marijuana Evaluation Platform!
+        </p>
+        <button class="button is-primary is-outline login-button">Make an Appointment</button>
+      </div>
+    </div>
+    </section>
+    <!-- END OF LANDING SECTION -->
+
+
+    <!-- HERO -->
+    <section class="hero is-primary is-bold is-medium">
+      <div class="hero-body">
+      </div>
+    </section>
+    <!-- END OF HERO SECTION -->
+
+    <!-- APP SECTION -->
+    <section id="how-to" class="hero is-fullheight">
+    </section>
+    <!-- END OF APP SECTION -->
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            Created in <strong>PVD</strong> by <a href="http://jgthms.com">Kyle Pearson</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/jgthms/bulma">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+</section>
+
+<!-- END OF LANDING VIEW -->
 
   <!-- SIGN UP VIEW -->
   <section id="sign-up-view" class="hero is-fullheight is-light is-bold">
@@ -156,6 +231,8 @@
     <button id="getAppointmentsButton" class="button is-danger">Show Appointment</button>
     <button id="clear-appointments" class="button is-info">Clear</button>
     <button id="create-appointment" class="button is-primary create-modal-toggle">Create Appointment</button>
+    <!-- <button class="button is-info" id="get-users-button">Get Users</button>
+    <div id="user-content"></div> -->
     <div id="app-content" class="content"></div>
     </section>
   <!-- END OF PROFILE VIEW -->
@@ -165,7 +242,7 @@
     <div class="modal-background"></div>
     <div class="modal-content box">
       <form id="create-app">
-        <legend>Create Appointment</legend>
+        <legend class="title">Create Appointment</legend>
         <input class="input" id="app-type" type="text" value="" placeholder="Type of Appointment">
         <input class="input" id="app-date" type="text" value="" placeholder="Date of appointment">
         <input class="input" id="app-doctor" type="text" value="" placeholder="Doctor">

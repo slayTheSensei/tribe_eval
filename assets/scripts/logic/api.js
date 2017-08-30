@@ -16,8 +16,17 @@ const getAppointments = function () {
   })
 }
 
+const getUsers = function () {
+  return $.ajax({
+    url: app.host + '/users',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 const changeDoctor = function (firstName, lastName, id) {
-  console.log(id + ' is the id')
   return $.ajax({
     url: app.host + '/doctors/' + id,
     method: 'PATCH',
@@ -72,5 +81,6 @@ module.exports = {
   changeDoctor,
   deleteAppointment,
   createAppointment,
-  changeDiagnosis
+  changeDiagnosis,
+  getUsers
 }

@@ -2,8 +2,6 @@
 
 const api = require('./api.js')
 const ui = require('./ui.js')
-// const showPatientsTemplate = require('../templates/patient-listing.handlebars')
-// const showAppointmentsTemplate = require('../templates/appointment-listing.handlebars')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onGetPatients = (event) => {
@@ -14,9 +12,14 @@ const onGetPatients = (event) => {
 }
 
 const onGetAppointments = (event) => {
-  // event.preventDefault()
   api.getAppointments()
     .then(ui.getAppointmentsSuccess)
+    .catch(ui.failure)
+}
+
+const onGetUsers = (event) => {
+  api.getUsers()
+    .then(ui.getUserSuccess)
     .catch(ui.failure)
 }
 
@@ -33,7 +36,6 @@ const onChangeDoctor = (event) => {
 
 const onDeleteAppointment = (event) => {
   event.preventDefault()
-  // $(this).attr('name')
   console.log(event.target.name)
   let id = (event.target.name)
   api.deleteAppointment(id)
@@ -42,8 +44,16 @@ const onDeleteAppointment = (event) => {
     .catch(ui.failure)
 }
 
+const onDeleteUser = (event) => {
+  event.preventDefault()
+  console.log('User data is ' + event.target.name)
+  api.deleteUser()
+    .then(ui.deleteAppointmentSuccess)
+    .then(refresh)
+    .catch(ui.failure)
+}
+
 const onClearAppointments = (event) => {
-  // event.preventDefault()
   ui.clearAppointments()
 }
 
@@ -53,7 +63,6 @@ const onCreateAppointment = (event) => {
   let date = $('#app-date').val()
   let doctor = $('#app-doctor').val()
   let patient = $('#app-patient').val()
-  // let data = getFormFields(event.target) || TODO come back and refractor
   console.log(type + ' ' + patient)
   api.createAppointment(type, date, doctor, patient)
     .then(ui.createAppointmentSuccess)
@@ -62,7 +71,6 @@ const onCreateAppointment = (event) => {
 
 // MODAL CLICK HANDLERS
 const toggleDoctorModal = function () {
-  // event.preventDefault()
   $('#change-doctor').toggleClass('is-active')
 }
 const toggleDiagnosisModal = function () {
@@ -82,7 +90,6 @@ const onUpdateDiagnosis = function (event) {
   event.preventDefault()
   let diagnosis = $('#diagnosis').val()
   let id = (event.target.name)
-  // let data = getFormFields(event.target)
   api.changeDiagnosis(diagnosis, id)
     .then(ui.changeDoctorSuccess)
     .catch(ui.failure)
@@ -102,7 +109,8 @@ const addHandlers = () => {
   $('body').on('click', '.modal-diagnosis-toggle', toggleDiagnosisModal)
   // Create Modal
   $('.create-modal-toggle').on('click', toggleCreateModal)
-  // $('#close-modal').on('click', toggleCreateModal)
+  $('#get-users-button').on('click', onGetUsers)
+  $('body').on('click', '#delete-user', onDeleteUser)
 }
 
 $(document).ready(onGetAppointments)

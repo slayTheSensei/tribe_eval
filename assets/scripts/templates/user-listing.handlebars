@@ -1,36 +1,36 @@
-{{#each appointments as |app|}}
+{{#each users as |user|}}
 
-<div class="box appointment" data-id="{{app.id}}">
+<div class="box appointment" data-id="{{user.id}}">
   <div class="columns">
     <div class="column is-3 name">
       <p>
-        <span class="title is-bold">{{app.app_type}}</span>
+        <span class="title is-bold">{{user.patients}}</span>
         <!-- <span class="button is-danger is-outlined follow">delete</span> -->
       </p>
     </div>
     <div class="column is-2 followers has-text-centered">
-      <p class="stat-val">{{app.doctor.given_name}} {{app.doctor.family_name}}</p>
+      <p class="stat-val">{{user.patient.doctor.given_name}} {{user.patient.doctor.family_name}}</p>
       <a class="modal-doctor-toggle" href="#">Change Doctor</a>
       <!-- Modal to patch request -->
     </div>
     <div class="column is-2 following has-text-centered">
       <p class="stat-val">12:00pm</p>
-      <!-- <a href="#">Change Time</a> -->
+      <a href="#">Change Time</a>
       <!-- Modal to patch request -->
     </div>
     <div class="column is-2 likes has-text-centered">
-      <p class="is-4">{{app.patient.diagnosis}}</p>
-      <a class="modal-diagnosis-toggle" href="#">Change Diagnosis</a>
+      <p class="is-4">{{user.patient.diagnosis}}</p>
+      <a class="modal-diagnosis-toggle"href="#">Change Diagnosis</a>
       <!-- Modal to patch request -->
     </div>
     <div class="column is-1">
-      <button id="delete-appointment" name="{{app.id}} "class="button is-danger is-outlined">Delete Appointment</button>
+      <button id="delete-user" name="{{user.doctor}} "class="button is-danger is-outlined">Delete Appointment</button>
     </div>
   </div>
 </div>
 
 <!-- DOCTOR MODAL-->
-<div id="change-doctor" class="modal">
+<!-- <div id="change-doctor" class="modal">
   <div class="modal-background"></div>
   <div class="modal-content box">
     <form id="change-doctor">
@@ -42,12 +42,12 @@
       </form>
     <button class="modal-close is-large modal-doctor-toggle refresh" aria-label="">Close</button>
   </div>
-</div>
+</div> -->
 <!-- <button class="modal-doctor-toggle button is-primary">Modal</button> -->
 <!-- END OF DOCTOR MODAL-->
 
 <!-- DIAGNOSIS MODAL-->
-<div id="update-diagnosis" class="modal">
+<!-- <div id="update-diagnosis" class="modal">
   <div class="modal-background"></div>
   <div class="modal-content box">
     <form id="change-diagnosis">
@@ -58,7 +58,7 @@
       </form>
     <button class="modal-close is-large modal-diagnosis-toggle refresh" aria-label="">Close</button>
   </div>
-</div>
+</div> -->
 <!-- <button class="modal-doctor-toggle button is-primary">Modal</button> -->
 <!-- END OF DIAGNOSIS MODAL-->
 

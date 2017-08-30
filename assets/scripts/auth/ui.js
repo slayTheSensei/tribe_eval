@@ -13,7 +13,6 @@ const success = (data) => {
 const signUpSuccess = (data) => {
   if (data) {
     console.log('new page')
-    // location.href = 'http://localhost:7165/signin.html'
   } else {
     console.log('Success')
   }

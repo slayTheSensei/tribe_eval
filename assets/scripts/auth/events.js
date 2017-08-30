@@ -37,13 +37,21 @@ const onChangePassword = (event) => {
     .catch(ui.failure)
 }
 
+const signUpView = function () {
+  event.preventDefault()
+  $('#landing').hide()
+  $('#sign-up-view').show()
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#sign-up-view').hide()
   $('#sign-in-view').hide()
   $('#profile-view').hide()
+  $('.login-button').on('click', signUpView)
   $('#to-sign-in').on('click', ui.signUpSuccess)
 }
 
