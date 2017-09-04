@@ -26,11 +26,10 @@ const onGetUsers = (event) => {
 
 const onChangeDoctor = (event) => {
   event.preventDefault()
-  let firstName = $('#first-name').val()
-  let lastName = $('#last-name').val()
-  let id = (event.target.name)
-  console.log(firstName + ' ' + lastName)
-  api.changeDoctor(firstName, lastName, id)
+  let docId = $('#doc-id').val()
+  let appId = (event.target.name)
+  console.log(docId + ' ' + appId)
+  api.changeDoctor(docId, appId)
     .then(ui.changeDoctorSuccess)
     .catch(ui.failure)
 }

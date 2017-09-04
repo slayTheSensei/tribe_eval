@@ -29,14 +29,13 @@ const getUsers = function () {
   })
 }
 
-const changeDoctor = function (firstName, lastName, id) {
+const changeDoctor = function (docId, appId) {
   return $.ajax({
-    url: app.host + '/doctors/' + id,
+    url: app.host + '/appointments/' + appId,
     method: 'PATCH',
     data: {
-      'doctor': {
-        'given_name': firstName,
-        'family_name': lastName
+      'appointment': {
+        'doctor_id': docId
       }
     }
   })
