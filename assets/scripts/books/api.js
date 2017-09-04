@@ -11,8 +11,11 @@ const getPatients = function () {
 
 const getAppointments = function () {
   return $.ajax({
-    url: app.host + '/appointments',
-    method: 'GET'
+    url: app.host + '/users/3',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
   })
 }
 

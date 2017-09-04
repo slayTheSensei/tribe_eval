@@ -112,8 +112,8 @@ const addHandlers = () => {
   $('#get-users-button').on('click', onGetUsers)
   $('body').on('click', '#delete-user', onDeleteUser)
 }
-
-$(document).ready(onGetAppointments)
+//
+// $(document).ready(onGetAppointments)
 
 module.exports = {
   addHandlers,

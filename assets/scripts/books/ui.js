@@ -8,13 +8,13 @@ const showUsersTemplate = require('../templates/user-listing.handlebars')
 
 const getPatientsSuccess = (data) => {
   console.log(data)
-  const showPatientsHtml = showPatientsTemplate({ patients: data.patients })
+  const showPatientsHtml = showPatientsTemplate({ users: data.user })
   $('.p-content').append(showPatientsHtml)
 }
 
 const getAppointmentsSuccess = (data) => {
   console.log(data)
-  const showAppointmentsHtml = showAppointmentsTemplate({ appointments: data.appointments })
+  const showAppointmentsHtml = showAppointmentsTemplate({ user: data.user.appointments })
   $('#app-content').append(showAppointmentsHtml)
 }
 
