@@ -37,7 +37,7 @@ const onChangeDoctor = (event) => {
 
 const onDeleteAppointment = (event) => {
   event.preventDefault()
-  console.log(event.target.name)
+  // console.log(event.target.name)
   let id = (event.target.name)
   api.deleteAppointment(id)
     .then(ui.deleteAppointmentSuccess)

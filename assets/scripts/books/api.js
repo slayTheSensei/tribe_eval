@@ -31,7 +31,7 @@ const getUsers = function () {
 
 const changeDoctor = function (firstName, lastName, id) {
   return $.ajax({
-    url: app.host + '/doctors/' + app.user.id,
+    url: app.host + '/doctors/' + id,
     method: 'PATCH',
     data: {
       'doctor': {
@@ -45,7 +45,7 @@ const changeDoctor = function (firstName, lastName, id) {
 const changeDiagnosis = function (diagnosis, id) {
   console.log(id + ' is the data')
   return $.ajax({
-    url: app.host + '/patients/' + app.user.id,
+    url: app.host + '/users/' + id,
     method: 'PATCH',
     data: {
       'patient': {
@@ -72,7 +72,7 @@ const createAppointment = function (type, date, doctor, patient) {
         'app-date': date,
         'app_type': type,
         'doctor_id': doctor,
-        'patient_id': patient
+        'user_id': app.user.id
       }
     }
   })
