@@ -14,7 +14,7 @@ const getPatientsSuccess = (data) => {
 
 const getAppointmentsSuccess = (data) => {
   console.log(data)
-  const showAppointmentsHtml = showAppointmentsTemplate({ user: data.user.appointments })
+  const showAppointmentsHtml = showAppointmentsTemplate({ user: data.user.appointments, doctor: data.user.doctors })
   $('#app-content').append(showAppointmentsHtml)
 }
 

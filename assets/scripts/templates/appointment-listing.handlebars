@@ -32,8 +32,21 @@
   <div class="modal-background"></div>
   <div class="modal-content box">
     <form id="change-doctor">
-          <legend clas>Change Doctor</legend><br>
-          <input class="input" id="doc-id" type="text" value="" placeholder="Doctor ID">
+          <!-- <legend clas>Change Doctor</legend><br>
+          <input class="input" id="doc-id" type="text" value="" placeholder="Doctor ID"> -->
+
+          <!-- DOCTOR DROPDOWN -->
+          <div class="control">
+            <div class="select">
+              <select id="doc-id">
+                <option value="1">1 - Dr. Snow</option>
+                <option value="2">2 - Dr. Targaryn</option>
+                <option value="3">3 - Dr. Stark</option>
+              </select>
+            </div>
+          </div>
+          <!-- DOCTOR DROPDOWN END -->
+
           <!-- <input class="input" id="last-name" type="text" value="" placeholder="Last Name"><br><br> -->
           <input class="button is-info" id="change-doc" type="submit" name="{{app.id}}" value="Change Doctor">
           <p class="changed has-text-danger"></p>
