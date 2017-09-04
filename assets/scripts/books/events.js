@@ -11,7 +11,8 @@ const onGetPatients = (event) => {
     .catch(ui.failure)
 }
 
-const onGetAppointments = (event) => {
+const onGetAppointments = (event, data) => {
+  console.log(data)
   api.getAppointments()
     .then(ui.getAppointmentsSuccess)
     .catch(ui.failure)
@@ -113,7 +114,7 @@ const addHandlers = () => {
   $('body').on('click', '#delete-user', onDeleteUser)
 }
 //
-// $(document).ready(onGetAppointments)
+// $(document).ready(onGetUsers)
 
 module.exports = {
   addHandlers,

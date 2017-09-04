@@ -11,7 +11,7 @@ const getPatients = function () {
 
 const getAppointments = function () {
   return $.ajax({
-    url: app.host + '/users/3',
+    url: app.host + '/users/' + app.user.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -31,7 +31,7 @@ const getUsers = function () {
 
 const changeDoctor = function (firstName, lastName, id) {
   return $.ajax({
-    url: app.host + '/doctors/' + id,
+    url: app.host + '/doctors/' + app.user.id,
     method: 'PATCH',
     data: {
       'doctor': {
@@ -45,7 +45,7 @@ const changeDoctor = function (firstName, lastName, id) {
 const changeDiagnosis = function (diagnosis, id) {
   console.log(id + ' is the data')
   return $.ajax({
-    url: app.host + '/patients/' + id,
+    url: app.host + '/patients/' + app.user.id,
     method: 'PATCH',
     data: {
       'patient': {

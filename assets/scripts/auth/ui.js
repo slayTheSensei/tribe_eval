@@ -1,5 +1,6 @@
 'use strict'
 
+const user = require('../books/events.js')
 const app = require('../app.js')
 
 const success = (data) => {
@@ -27,8 +28,11 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user
   console.log(app.user)
+  console.log(data)
   $('#sign-in-view').hide()
   $('#profile-view').show()
+  // user.onGetAppointments()
+
   // location.href = 'http://localhost:7165/profile.html'
 }
 
