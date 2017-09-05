@@ -31,7 +31,7 @@ const signInSuccess = (data) => {
   console.log(data)
   $('#sign-in-view').hide()
   $('#profile-view').show()
-  // user.onGetAppointments()
+  $('#greeting').html('Hello, ' + app.user.given_name)
 
   // location.href = 'http://localhost:7165/profile.html'
 }

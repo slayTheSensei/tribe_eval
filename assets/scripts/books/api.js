@@ -10,6 +10,7 @@ const getPatients = function () {
 }
 
 const getAppointments = function () {
+  console.log('Hello ' + app.user.given_name) // use this to personaly greet a user
   return $.ajax({
     url: app.host + '/users/' + app.user.id,
     method: 'GET',
