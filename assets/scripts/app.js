@@ -1,7 +1,7 @@
 'use strict'
 
 const app = {
-  host: 'https://telehealth-api.herokuapp.com/'
+  host: 'https://telehealth-api.herokuapp.com'
   // host: 'http://localhost:4741/'
 }
 
