@@ -96,6 +96,14 @@ const onUpdateDiagnosis = function (event) {
     .catch(ui.failure)
 }
 
+// Reusable cancel function that returns to landing page.
+const cancelButton = function () {
+  $('#sign-up-view').hide()
+  $('#sign-in-view').hide()
+  $('#profile').hide()
+  $('#landing').show()
+}
+
 const addHandlers = () => {
   $('#getPatientsButton').on('click', onGetPatients)
   $('#getAppointmentsButton').on('click', onGetAppointments)
@@ -112,6 +120,8 @@ const addHandlers = () => {
   $('.create-modal-toggle').on('click', toggleCreateModal)
   $('#get-users-button').on('click', onGetUsers)
   $('body').on('click', '#delete-user', onDeleteUser)
+  // clickhandler for cancel button
+  $('.to-landing').on('click', cancelButton)
 }
 //
 // $(document).ready(onGetUsers)
